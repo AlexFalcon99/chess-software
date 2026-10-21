@@ -6,5 +6,5 @@ public enum PieceType {
     KING,
     QUEEN,
     KNIGHT,
-    ROOK;
+    ROOK
 }
