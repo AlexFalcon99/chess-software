@@ -3,14 +3,17 @@ package software.ulpgc.chess.domain.model;
 import java.time.Instant;
 
 public class Move {
-    private final String from;
-    private final String to;
+    // Casillas encapsuladas mediante el Value Object Square
+    private final Square from;
+    private final Square to;
+
+    // Propiedades de la pieza y metadatos del movimiento
     private final PieceColor color;
     private final PieceType type;
     private final int moveNumber;
     private final Instant timestamp;
 
-    public Move(String from, String to, PieceColor color, PieceType type, int moveNumber, Instant timestamp) {
+    public Move(Square from, Square to, PieceColor color, PieceType type, int moveNumber, Instant timestamp) {
         this.from = from;
         this.to = to;
         this.color = color;
@@ -19,11 +22,11 @@ public class Move {
         this.timestamp = timestamp;
     }
 
-    public String getFrom() {
+    public Square getFrom() {
         return from;
     }
 
-    public String getTo() {
+    public Square getTo() {
         return to;
     }
 
